@@ -1,5 +1,5 @@
 package com.people;
 
-public interface Payable {
+public interface Payable extends Comparable<Payable> {
     double getPaymentAmount();
 }

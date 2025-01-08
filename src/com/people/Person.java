@@ -1,6 +1,6 @@
 package com.people;
 
-public class Person implements Comparable<Person> ,Payable{
+public class Person implements Payable{
     private int id;
     private  static  int id_gen=1;
     private String name;
@@ -46,7 +46,7 @@ public class Person implements Comparable<Person> ,Payable{
 
 
     @Override
-    public int compareTo(Person other) {
+    public int compareTo(Payable other) {
         return Double.compare(this.getPaymentAmount(), other.getPaymentAmount());
     }
 }
